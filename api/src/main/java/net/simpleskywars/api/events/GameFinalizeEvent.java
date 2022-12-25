@@ -1,5 +1,6 @@
 package net.simpleskywars.api.events;
 
+import net.simpleskywars.api.game.GamePlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
@@ -12,9 +13,9 @@ extends Event {
 	private static final HandlerList HANDLER_LIST = new HandlerList();
 	
 	private final Collection<Player> players;
-	private final Player winner;
+	private final GamePlayer winner;
 	
-	public GameFinalizeEvent(Collection<Player> players, Player winner) {
+	public GameFinalizeEvent(Collection<Player> players, GamePlayer winner) {
 		this.players = Objects.requireNonNull(players, "The collection of the players are null.");
 		this.winner = Objects.requireNonNull(winner, "The winner of game is null.");
 	}
@@ -23,7 +24,7 @@ extends Event {
 		return players;
 	}
 	
-	public Player getWinner() {
+	public GamePlayer getWinner() {
 		return winner;
 	}
 	
