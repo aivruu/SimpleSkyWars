@@ -11,7 +11,7 @@ val libraries = "$directory.libraries"
 repositories {
 	maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
 	maven("https://repo.glaremasters.me/repository/concuncan/")
-	maven("https://repo.extendedclip.com/content/repositories/snapshots/")
+	maven("https://repo.extendedclip.com/content/repository/snapshots/")
 	maven("https://jitpack.io/")
 	mavenCentral()
 }
