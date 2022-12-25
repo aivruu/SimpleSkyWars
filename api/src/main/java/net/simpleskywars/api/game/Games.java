@@ -23,6 +23,8 @@ public class Games {
 		players.put(player, new GamePlayer(
 			 player,
 			 player.getLevel(),
+			 0,
+			 0,
 			 player.getExp(),
 			 player.getInventory().getContents(),
 			 null
