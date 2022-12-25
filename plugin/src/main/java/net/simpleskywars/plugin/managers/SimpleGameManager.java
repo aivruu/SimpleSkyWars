@@ -13,12 +13,10 @@ import com.grinderwolf.swm.api.loaders.SlimeLoader;
 import com.grinderwolf.swm.api.world.properties.SlimeProperties;
 import com.grinderwolf.swm.api.world.properties.SlimePropertyMap;
 import net.simpleskywars.api.game.GameArena;
-import net.simpleskywars.api.game.GamePlayer;
 import net.simpleskywars.api.game.Games;
 import net.simpleskywars.api.managers.GameManager;
 import net.simpleskywars.plugin.SimpleSkyWars;
 import net.simpleskywars.plugin.utils.LogUtils;
-import org.bukkit.entity.Player;
 
 import java.io.File;
 import java.io.IOException;
@@ -40,11 +38,6 @@ implements GameManager {
 	@Override
 	public GameArena getGame(String gameName) {
 		return Games.to(gameName);
-	}
-	
-	@Override
-	public GamePlayer getPlayer(Player player) {
-		return Games.getPlayer(player);
 	}
 	
 	@Override

@@ -1,13 +1,9 @@
 package net.simpleskywars.api.managers;
 
 import net.simpleskywars.api.game.GameArena;
-import net.simpleskywars.api.game.GamePlayer;
-import org.bukkit.entity.Player;
 
 public interface GameManager {
 	GameArena getGame(String gameName);
-	
-	GamePlayer getPlayer(Player player);
 	
 	void createGame(String gameName, int gameCapacity);
 	
