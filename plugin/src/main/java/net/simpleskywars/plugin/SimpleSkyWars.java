@@ -47,7 +47,8 @@ extends JavaPlugin {
 		titleManager = XTitle.newTitleManager(adaptManager.getAdapt());
 		slimePlugin = (SlimePlugin) getServer().getPluginManager().getPlugin("SlimeWorldManager");
 		gameManager = ManagerFactory.newGameManager(slimePlugin);
-		
+		actionManager = ManagerFactory.newActionManager(this);
+	
 		LogUtils.setDebugEnabled(true);
 	}
 	
