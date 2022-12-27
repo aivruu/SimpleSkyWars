@@ -10,6 +10,7 @@ val libraries = "$directory.libraries"
 
 repositories {
 	maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
+	maven("https://oss.sonatype.org/content/repositories/snapshots/")
 	maven("https://repo.glaremasters.me/repository/concuncan/")
 	maven("https://repo.extendedclip.com/content/repositories/placeholderapi/")
 	maven("https://jitpack.io/")

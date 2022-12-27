@@ -8,6 +8,7 @@ val release = property("version") as String
 
 repositories {
 	maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
+	maven("https://oss.sonatype.org/content/repositories/snapshots/")
 	mavenCentral()
 }
 
