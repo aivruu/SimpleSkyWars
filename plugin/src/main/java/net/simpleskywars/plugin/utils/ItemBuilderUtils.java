@@ -2,7 +2,6 @@ package net.simpleskywars.plugin.utils;
 
 import com.google.common.base.Preconditions;
 import net.xconfig.bukkit.utils.TextUtils;
-import net.xtitle.lib.XTitle;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -17,6 +16,7 @@ public class ItemBuilderUtils {
 		private final Material material;
 		
 		private int amount;
+		private boolean unbreakable;
 		private String displayName;
 		private String lore;
 		
@@ -26,6 +26,11 @@ public class ItemBuilderUtils {
 		
 		public Builder amount(int amount) {
 			this.amount = amount;
+			return this;
+		}
+		
+		public Builder unbreakable(boolean unbreakable) {
+			this.unbreakable = unbreakable;
 			return this;
 		}
 		
@@ -41,7 +46,6 @@ public class ItemBuilderUtils {
 			return this;
 		}
 		
-		@SuppressWarnings("deprecation")
 		public ItemStack build() {
 			if (amount <= 0) amount = 1;
 			
@@ -54,8 +58,7 @@ public class ItemBuilderUtils {
 			meta.setDisplayName(displayName);
 			meta.setLore(Arrays.asList(lore.split("\n")));
 			
-			if (XTitle.canSupport(13)) meta.setUnbreakable(true);
-			else meta.spigot().setUnbreakable(true);
+			if (unbreakable) meta.spigot().setUnbreakable(true);
 			
 			item.setItemMeta(meta);
 			return item;
